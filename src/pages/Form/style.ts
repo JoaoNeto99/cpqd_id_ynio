@@ -14,13 +14,19 @@ export const Container = styled.div`
 
 export const Card = styled.div`
     background: #ffffff;
-    margin: 100px 100px 140px 100px;
+    margin: 20px;
     padding: 50px;
     display: flex;
-    flex: 1;
     flex-direction: column;
     align-items: flex-start;
-    width: 50%;
+    width: 90%;
+    max-width: 500px; /* Limita o tamanho máximo em telas grandes */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    @media (min-width: 768px) {
+        padding: 50px;
+        margin: 100px auto;
+    }
 `;
 
 export const Logo = styled.img`
