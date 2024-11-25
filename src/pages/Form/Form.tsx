@@ -28,11 +28,11 @@ const Form = () => {
         setIndex(index - 1);
     }
 
-    function handleInputCPFChange(event) {
+    function handleInputCPFChange(event: any) {
         setCpf(event.target.value); // Atualiza o estado com o valor digitado
     }
 
-    function handleInputPhoneChange(event) {
+    function handleInputPhoneChange(event: any) {
         setPhone(event.target.value); // Atualiza o estado com o valor digitado
     }
 
