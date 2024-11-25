@@ -17,7 +17,7 @@ import {useState} from "react";
 
 const Form = () => {
     const [cpf, setCpf] = useState('');
-    const [phone, setPhone] = useState('');
+    //const [phone, setPhone] = useState('');
     const [index, setIndex] = useState(0);
 
     function handleFoward() {
@@ -34,8 +34,11 @@ const Form = () => {
         setCpf(event.target.value)
     }
 
-    function handleInputPhoneChange(event: any) {
-        setPhone(event.target.value); // Atualiza o estado com o valor digitado
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    function handleInputPhoneChange(event: never) {
+        //setPhone(event.target.value); // Atualiza o estado com o valor digitado
     }
 
     function handleSubmit() {
