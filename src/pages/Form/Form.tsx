@@ -39,6 +39,7 @@ const Form = () => {
     function handleSubmit() {
         console.log(cpf)
         console.log(phone)
+        window.location.href = "meuapp://abrir?info="+cpf;
     }
 
     return (
