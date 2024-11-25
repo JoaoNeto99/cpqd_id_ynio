@@ -39,7 +39,7 @@ const Form = () => {
     function handleSubmit() {
         console.log(cpf)
         console.log(phone)
-        window.location.href = "br.com.cpqd.ynio.demo://abrir?info="+cpf;
+        window.location.href = "br.com.cpqd.ynio.demo://login?cpf="+cpf;
     }
 
     return (
