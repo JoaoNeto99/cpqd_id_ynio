@@ -11,7 +11,7 @@ import {
     Button,
     Disclaimer,
     WrapperButton,
-    ButtonBack, Ynio
+    ButtonBack, Ynio, CpfInput
 } from "./style.ts";
 import {useState} from "react";
 
@@ -22,6 +22,7 @@ const Form = () => {
 
     function handleFoward() {
         setIndex(index + 1);
+        console.log(cpf)
     }
 
     function handleBack() {
@@ -29,7 +30,8 @@ const Form = () => {
     }
 
     function handleInputCPFChange(event: any) {
-        setCpf(event.target.value); // Atualiza o estado com o valor digitado
+        //setCpf(event.target.value); // Atualiza o estado com o valor digitado
+        setCpf(event.target.value)
     }
 
     function handleInputPhoneChange(event: any) {
@@ -37,9 +39,9 @@ const Form = () => {
     }
 
     function handleSubmit() {
-        console.log(cpf)
-        console.log(phone)
-        window.location.href = "br.com.cpqd.ynio.demo://login?cpf="+cpf;
+        //console.log(cpf.replace(/\D/g, ''))
+       // console.log(phone)
+        window.location.href = "br.com.cpqd.ynio.demo://login?cpf="+cpf.replace(/\D/g, '');
     }
 
     return (
@@ -52,7 +54,9 @@ const Form = () => {
                         <>
                             <Wrapper>
                                 <Subtitle>Insira seu CPF para continuar.</Subtitle>
-                                <Input
+                                <CpfInput
+                                    mask="999.999.999-99"
+                                    value={cpf}
                                     type="text"
                                     placeholder="CPF"
                                     onChange={handleInputCPFChange}

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import InputMask from 'react-input-mask';
 
 export const Container = styled.div`
     display: flex;
@@ -24,6 +25,7 @@ export const Card = styled.div`
 
 export const Logo = styled.img`
     color: #333;
+    width: 100%;
     align-self: center;
     margin-bottom: 80px;
 `;
@@ -51,6 +53,22 @@ export const Subtitle = styled.p`
     align-self: flex-start;
 `;
 
+export const CpfInput = styled(InputMask)`
+    padding: 10px;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    font-size: 14px;
+    margin-bottom: 30px;
+    background-color: white;
+    color: #1a1a1a;
+
+    &:focus {
+        outline: none;
+        border-color: #666;
+    }
+`;
+
 export const Input = styled.input`
     padding: 10px;
     border-top-width: 0;
@@ -69,6 +87,7 @@ export const Input = styled.input`
 
 export const WrapperButton = styled.div`
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row; /* Para alinhamento vertical */
     justify-content: flex-end;
     width: 100%; /* Ocupa todo o espaço disponível no Card */
